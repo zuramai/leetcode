@@ -16,8 +16,13 @@ impl Solution {
     }
 }
 
-fn main() {
-    println!("Result: {}",Solution::num_identical_pairs(vec![1,2,3,1,1,3]));
-    println!("Result: {}",Solution::num_identical_pairs(vec![1,1,1,1]));
-    println!("Hello, world!");
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    pub fn test() {
+        println!("Result: {}",Solution::num_identical_pairs(vec![1,2,3,1,1,3]));
+        println!("Result: {}",Solution::num_identical_pairs(vec![1,1,1,1]));
+        println!("Hello, world!");
+    }
 }

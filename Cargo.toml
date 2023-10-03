@@ -1,5 +1,5 @@
 [package]
-name = "Problem_4_Median_of_Two_Sorted_Arrays"
+name = "leetcode"
 version = "0.1.0"
 edition = "2021"
 

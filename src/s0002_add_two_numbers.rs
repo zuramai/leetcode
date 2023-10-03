@@ -13,9 +13,8 @@ impl ListNode {
     }
   }
 }
-struct Solution {
+struct Solution {}
 
-}
 impl Solution {
     pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let list_to_reversed_num = |list: Option<Box<ListNode>>| {
@@ -61,7 +60,13 @@ impl Solution {
         list_result
     }
 }
-fn main() {
+#[cfg(test)]
+mod tests {
+  use super::*;
+
+  #[test]
+  pub fn test() {
+
     let l1 = Some(Box::new(ListNode {
       val: 9,
       next: None
@@ -111,4 +116,5 @@ fn main() {
     //   }))
     // }));
     println!("Result: {:?}", Solution::add_two_numbers(l1, l2));
+  }
 }

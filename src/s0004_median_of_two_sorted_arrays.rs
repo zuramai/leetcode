@@ -17,9 +17,15 @@ impl Solution {
         median as f64
     }
 }
-fn main() {
-    let res = Solution::find_median_sorted_arrays(vec![1,3], vec![2]);
-    let res2 = Solution::find_median_sorted_arrays(vec![1,3], vec![2,4]);
-    println!("res1: {}", res);
-    println!("res2: {}", res2);
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    pub fn test() {
+        let res = Solution::find_median_sorted_arrays(vec![1,3], vec![2]);
+        let res2 = Solution::find_median_sorted_arrays(vec![1,3], vec![2,4]);
+        println!("res1: {}", res);
+        println!("res2: {}", res2);
+    }
 }

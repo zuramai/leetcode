@@ -5,5 +5,6 @@ mod s0013_roman_to_int;
 mod s0014_longest_common_prefix;
 mod s0024_swap_node_in_pairs;
 mod s0118_pascal_triangle;
+mod s0119_pascal_triangle_2;
 mod s1512_number_of_good_pairs;
 mod utils;

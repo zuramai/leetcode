@@ -12,4 +12,5 @@ impl ListNode {
       val
     }
   }
+
 }

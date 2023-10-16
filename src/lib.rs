@@ -8,6 +8,7 @@ mod s0020_valid_parentheses;
 mod s0118_pascal_triangle;
 mod s0119_pascal_triangle_2;
 mod s0125_valid_palindrome;
+mod s0217_contains_duplicate;
 mod s0509_fibonacci;
 mod s1512_number_of_good_pairs;
 mod utils;

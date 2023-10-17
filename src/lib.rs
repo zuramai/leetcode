@@ -6,6 +6,7 @@ mod s0014_longest_common_prefix;
 mod s0024_swap_node_in_pairs;
 mod s0020_valid_parentheses;
 mod s0021_merge_two_lists;
+mod s0036_valid_sudoku;
 mod s0048_rotate_image;
 mod s0118_pascal_triangle;
 mod s0119_pascal_triangle_2;

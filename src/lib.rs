@@ -1,11 +1,13 @@
 mod s0002_add_two_numbers;
 mod s0004_median_of_two_sorted_arrays;
+mod s0005_longest_palindromic;
 mod s0009_palindrome;
 mod s0013_roman_to_int;
 mod s0014_longest_common_prefix;
-mod s0024_swap_node_in_pairs;
 mod s0020_valid_parentheses;
 mod s0021_merge_two_lists;
+mod s0024_swap_node_in_pairs;
+mod s0026_remove_duplicates_sorted_array;
 mod s0036_valid_sudoku;
 mod s0048_rotate_image;
 mod s0118_pascal_triangle;

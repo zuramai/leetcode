@@ -9,6 +9,7 @@ mod s0021_merge_two_lists;
 mod s0024_swap_node_in_pairs;
 mod s0026_remove_duplicates_sorted_array;
 mod s0027_remove_element;
+mod s0028_find_first_occurrence;
 mod s0036_valid_sudoku;
 mod s0048_rotate_image;
 mod s0118_pascal_triangle;

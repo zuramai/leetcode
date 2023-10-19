@@ -13,6 +13,8 @@ mod s0028_find_first_occurrence;
 mod s0036_valid_sudoku;
 mod s0041_first_missing_positive;
 mod s0048_rotate_image;
+mod s0051_n_queens;
+mod s0058_length_last_word;
 mod s0118_pascal_triangle;
 mod s0119_pascal_triangle_2;
 mod s0125_valid_palindrome;

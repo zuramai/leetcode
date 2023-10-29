@@ -27,6 +27,7 @@ mod s0217_contains_duplicate;
 mod s0342_power_of_four;
 mod s0505_find_largest_value_tree;
 mod s0509_fibonacci;
+mod s0746_minimum_cost_stairs;
 mod s0779_kth_symbol;
 mod s0896_monotonic;
 mod s1232_check_if_straight_line;

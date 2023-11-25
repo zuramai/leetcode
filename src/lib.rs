@@ -35,5 +35,6 @@ mod s1441_array_with_stack;
 mod s1512_number_of_good_pairs;
 mod s1535_winner_array_game;
 mod s1630_arithmetic_subarray;
+mod s1685_sum_absolute_diff;
 mod s2101_detonate_maximum_bombs;
 mod utils;

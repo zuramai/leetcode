@@ -1,6 +1,7 @@
 mod s0002_add_two_numbers;
 mod s0004_median_of_two_sorted_arrays;
 mod s0005_longest_palindromic;
+mod s0006_zigzag_conversion;
 mod s0009_palindrome;
 mod s0011_container_most_water;
 mod s0013_roman_to_int;

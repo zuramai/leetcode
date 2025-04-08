@@ -18,6 +18,11 @@ impl ListNode {
   
 }
 
+pub fn vec_str(vec: Vec<&str>) -> Vec<String> {
+  vec.iter().map(|s| s.to_string()).collect()
+}
+
+
 impl From<Box<ListNode>> for Vec<i32> {
   fn from(mut value: Box<ListNode>) -> Self {
     let mut value = Some(&value);
@@ -43,6 +48,10 @@ impl From<Vec<i32>> for Box<ListNode> {
     }
     tail.unwrap()
   }
+}
+
+pub fn vec_string(value: Vec<&str>) -> Vec<String> {
+    value.iter().map(|v| v.to_string()).collect()
 }
 
 #[derive(Debug, PartialEq, Eq)]

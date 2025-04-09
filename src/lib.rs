@@ -20,6 +20,7 @@ mod s0036_valid_sudoku;
 mod s0041_first_missing_positive;
 mod s0046_permutations;
 mod s0048_rotate_image;
+mod s0049_group_anagrams;
 mod s0051_n_queens;
 mod s0058_length_last_word;
 mod s0062_unique_paths;

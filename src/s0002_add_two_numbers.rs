@@ -1,92 +1,73 @@
+use std::boxed::Box;
+
 use crate::utils::ListNode;
 
+pub struct Solution;
 
-struct Solution {}
-
+// Definition for singly-linked list.
+// #[derive(PartialEq, Eq, Clone, Debug)]
+// pub struct ListNode {
+//   pub val: i32,
+//   pub next: Option<Box<ListNode>>
+// }
+// 
+// impl ListNode {
+//   #[inline]
+//   fn new(val: i32) -> Self {
+//     ListNode {
+//       next: None,
+//       val
+//     }
+//   }
+// }
 impl Solution {
-    pub fn add_two_numbers(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let list_to_reversed_num = |list: Option<Box<ListNode>>| {
-          let mut curr = &list;
-          let mut nums = String::from("");
-          while let Some(c) = curr {
-            nums.push_str(&c.val.to_string());
-            curr = &c.next;
-          }
-          println!("nums {:?}", nums);
-          
-          nums.chars().rev().collect::<String>().parse::<i64>().unwrap()
-        };
-        
-        let num1 = list_to_reversed_num(l1);
-        let num2 = list_to_reversed_num(l2);
-        println!("num1 {:?}", num1);
-        println!("num2 {:?}", num2);
-        let total = num1 + num2;
-        println!("total {:?}", total);
+    pub fn add_two_numbers(mut l1: Option<Box<ListNode>>, mut l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+        let mut total = 0;
+        let mut i = 0;
+        let mut leftover = 0;
+        let mut output_root = None;
+        let mut output_last_node: Option<&mut Box<ListNode>> = None;
 
-        let num_str = total.to_string();
-        let num_chars = num_str.chars();
+        while l1.is_some() || l2.is_some() {
+            let mut firstnum = 0;
+            if let Some(first) = l1 {
+                firstnum = first.val;
+                l1 = first.next;
+            }
+            let mut secondnum = 0;
+            if let Some(second) = l2 {
+                secondnum = second.val;
+                l2 = second.next;
+            }
+            let mut current_total = firstnum + secondnum + leftover;
+            if current_total >= 10 {
+                leftover = 1;
+                current_total = current_total % 10;
+            } else {
+                leftover = 0;
+            };
 
-        let mut list_result: Option<Box<ListNode>> = None;
-
-        for c in num_chars {
-          let num = c.to_digit(10).unwrap() as i32;
-          println!("current char {:?}", c);
-          if list_result.is_none() {
-            list_result = Some(Box::new(ListNode::new(num)));
-          }
-          else {
-            let temp = *list_result.unwrap();
-            let new_node = Some(Box::new(ListNode {
-              next: Some(Box::new(temp)),
-              val: num
-            }));
-            list_result = new_node;
-          }
+            let new_node = Some(Box::new(ListNode::new(current_total)));
+            if i == 0 {
+                output_root = new_node;
+                output_last_node = output_root.as_mut();
+            } else {
+                if let Some(last_node) = output_last_node {
+                    last_node.next = new_node;
+                    output_last_node = last_node.next.as_mut();
+                }
+            }
+            i += 1;
         }
 
-        list_result
+
+        if leftover > 0 && let Some(last_node) = output_last_node {
+            let new_node = Some(Box::new(ListNode::new(1)));
+
+            last_node.next = new_node;
+            output_last_node = last_node.next.as_mut();
+        }
+
+        output_root
     }
-}
-#[cfg(test)]
-mod tests {
-  use super::*;
-
-  #[test]
-  pub fn test() {
-
-    let l1 = Some(Box::new(ListNode {
-      val: 9,
-      next: None
-    }));
-    let l2 = Some(Box::new(ListNode {
-      val: 1,
-      next: Some(Box::new(ListNode {
-        val: 9,
-        next:  Some(Box::new(ListNode {
-          val: 9,
-          next: Some(Box::new(ListNode {
-            val: 9,
-            next:  Some(Box::new(ListNode {
-              val: 9,
-              next: Some(Box::new(ListNode {
-                val: 9,
-                next: Some(Box::new(ListNode {
-                  val: 9,
-                  next:  Some(Box::new(ListNode {
-                    val: 9,
-                    next: Some(Box::new(ListNode {
-                      val: 9,
-                      next: Some(Box::new(ListNode::new(9))),
-                    }))
-                  })),
-                })),
-              })),
-            })),
-          }))
-        })),
-      }))
-    }));
-    println!("Result: {:?}", Solution::add_two_numbers(l1, l2));
-  }
 }

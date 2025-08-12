@@ -1,4 +1,5 @@
 mod s0002_add_two_numbers;
+mod s0003_longest_substring;
 mod s0004_median_of_two_sorted_arrays;
 mod s0005_longest_palindromic;
 mod s0006_zigzag_conversion;

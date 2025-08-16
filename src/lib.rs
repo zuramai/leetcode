@@ -9,6 +9,7 @@ mod s0009_palindrome;
 mod s0012_integer_to_roman;
 mod s0013_roman_to_int;
 mod s0014_longest_common_prefix;
+mod s0016_3sum_closest;
 mod s0020_valid_parentheses;
 mod s0021_merge_two_lists;
 mod s0024_swap_node_in_pairs;

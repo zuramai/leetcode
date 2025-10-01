@@ -57,4 +57,5 @@ mod s2560_house_robber_iv;
 mod s2579_number_colored_cells;
 mod s2807_common_divisors;
 mod s3310_sum_ascii;
+mod s3443_manhattan;
 mod utils;

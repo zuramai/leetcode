@@ -40,6 +40,7 @@ mod s0509_fibonacci;
 mod s0746_minimum_cost_stairs;
 mod s0779_kth_symbol;
 mod s0896_monotonic;
+mod s1298_maximum_candies_boxes;
 mod s1232_check_if_straight_line;
 mod s1233_remove_subfolder;
 mod s1441_array_with_stack;

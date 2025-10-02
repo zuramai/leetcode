@@ -24,6 +24,7 @@ mod s0046_permutations;
 mod s0048_rotate_image;
 mod s0049_group_anagrams;
 mod s0051_n_queens;
+mod s0056_merge_intervals;
 mod s0058_length_last_word;
 mod s0062_unique_paths;
 mod s0063_unique_paths_2;

@@ -35,6 +35,7 @@ mod s0118_pascal_triangle;
 mod s0119_pascal_triangle_2;
 mod s0125_valid_palindrome;
 mod s0151_reverse_word_in_a_string;
+mod s0198_house_robber;
 mod s0206_reverse_linked;
 mod s0217_contains_duplicate;
 mod s0242_valid_anagram;
